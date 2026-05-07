@@ -8,26 +8,85 @@
 		<link href="assets/styles.css" rel="stylesheet">
 		<style>
 			/* Schrijf hier gewoon je CSS voor dit component */
+			.faqButton{
+				overflow: visible;
+				padding: 10px;
+				margin: 10px;
+				border: solid 1px #050542;
+				border-radius: 5px;
 
+				::marker {
+					content: "+";
+				}
+			}
+
+			.faqButton:nth-of-type(1)[open] {
+  				background-color: #A675F5;
+				border: none;
+			}
+
+			.faqButton:nth-of-type(2)[open] {
+  				background-color: #66E5BF;
+				border: none;
+			}
+			
+			.faqButton:nth-of-type(3)[open] {
+  				background-color: #FFFC86;
+				border: none;
+			}
+
+			.faqButton:nth-of-type(1)[open] summary {
+  				background-color: #A675F5;
+				border: none;
+			}
+
+			.faqButton:nth-of-type(2)[open] summary {
+  				background-color: #66E5BF;
+				border: none;
+			}
+			
+			.faqButton:nth-of-type(3)[open] summary {
+  				background-color: #FFFC86;
+				border: none;
+			}
+
+			.faqButton:nth-of-type(1)[open] article {
+  				background-color: #A675F5;
+				border: none;
+				display: block;
+			}
+
+			.faqButton:nth-of-type(2)[open] article {
+  				background-color: #66E5BF;
+				border: none;
+				display: block;
+			}
+			
+			.faqButton:nth-of-type(3)[open] article {
+  				background-color: #FFFC86;
+				border: none;
+				display: block;
+			}
 			/* Hint: Dit component kun je volledig met HTML en CSS bouwen */
 
 			/* Hint: Denk aan de states van het component; deze kan open en dicht zijn */
 		</style>
 	</head>
 	<body>
+
 		<h1> Veelgestelde vragen </h1>
 
 
 		
 		<details class="faqButton" id="first">
-			<summary> Wat is frontend development?</summary>
+			<summary class="faqSummary"> Wat is frontend development?</summary>
 			<article> Een frontend developer ontwerpt en bouwt websites in HTML, CSS en JavaScript. Deze frontend talen
 				leer je bij ons, je hebt dus geen voorkennis nodig.
 			</article>
 		</details>
 
 		<details class="faqButton" id="second">
-			<summary> Moet ik al kunnen coderen? </summary>
+			<summary class="faqSummary"> Moet ik al kunnen coderen? </summary>
 			<article> Nee, je hebt helemaal geen voorkennis nodig om te beginnen aan deze opleiding, we kunnen je alles
 				leren! Als je wel al voorkennis hebt, is dat alleen maar goed, dan kunnen we je helpen je skills
 				te verbeteren en te verdiepen in de stof.
@@ -35,7 +94,7 @@
 		</details>
 
 		<details class="faqButton" id="third">
-			<summary> Wat is een Associate Degree? </summary>
+			<summary class="faqSummary"> Wat is een Associate Degree? </summary>
 				<article> Een Associate degree-opleiding is een tweejarige hbo-opleiding op niveau 5. Een Ad slaat een brug
 					tussen het mbo-4 (niveau 4) en een hbo-bachelor (niveau 6). Met een Associate degree kies je voor een
 					praktijkgerichte hbo-opleiding; je wordt opgeleid voor een beroep dat aansluit bij de praktijk. In dit
